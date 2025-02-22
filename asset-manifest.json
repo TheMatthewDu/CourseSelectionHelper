@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/https,://theMatthewDu.github.io/CourseSelectionHelper/static/css/main.1390358d.css",
+    "main.js": "/https,://theMatthewDu.github.io/CourseSelectionHelper/static/js/main.563d757a.js",
+    "static/js/453.51e747e3.chunk.js": "/https,://theMatthewDu.github.io/CourseSelectionHelper/static/js/453.51e747e3.chunk.js",
+    "index.html": "/https,://theMatthewDu.github.io/CourseSelectionHelper/index.html",
+    "main.1390358d.css.map": "/https,://theMatthewDu.github.io/CourseSelectionHelper/static/css/main.1390358d.css.map",
+    "main.563d757a.js.map": "/https,://theMatthewDu.github.io/CourseSelectionHelper/static/js/main.563d757a.js.map",
+    "453.51e747e3.chunk.js.map": "/https,://theMatthewDu.github.io/CourseSelectionHelper/static/js/453.51e747e3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1390358d.css",
+    "static/js/main.563d757a.js"
+  ]
+}
