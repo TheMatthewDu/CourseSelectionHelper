@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Grid from "./js/grid";
 import MinorProgressBar from "./js/minor_progress_bar";
+import CertificateProgressBar from "./js/certificate_progress_bar";
 import checkRequirements from "./js/requirement_validation_tab";
+import CapstoneDropDown from "./js/capstone_topic_tab";
 import {getInitialData} from "./js/data/course_grid"
-import {CapstoneDropDown} from "./js/capstone_topic_tab";
 import {handleExport} from "./js/handle_export";
 import {update_streams} from "./js/update_streams";
 
@@ -81,11 +82,11 @@ function App() {
     return (
         <div className="dashboard">
             <h1>Mechanical Engineering Degree Explorer</h1>
-            <p>Please note this is an unofficial tool that is currently still in development. Please refer to the <a href="https://engineering.calendar.utoronto.ca/">Engineering Academic Calendar</a> for
+            <p>Please note this is an unofficial tool that is currently still in development. Please refer to the <a href="https://engineering.calendar.utoronto.ca/" target="_blank" rel="noreferrer">Engineering Academic Calendar</a> for
                 official program requirements</p>
-            <p>If you find an issue or bug, or would like to suggest a new feature, please send an email to
-                matthew [dot] du [at] mail.utoronto.ca. Please check <a href="https://docs.google.com/document/d/1jSp2kRMLBUIHAByMg1pX9_lP01Y2zGK0HjqxS0RA2qQ/edit?usp=sharing">here</a> to see if the issue/feature
-                has been identified</p>
+            <p>If you find an issue or bug, or would like to suggest a new feature, please report them <a href="https://github.com/TheMatthewDu/CourseSelectionHelper"  target="_blank" rel="noreferrer">here</a> or submit
+                a pull request yourself!
+            </p>
 
             <div className="main-content">
                 <div className="grids-section">
@@ -130,11 +131,16 @@ function App() {
                                 grids={grids}
                                 capstone={selectedOption}
                             />
+                            <h2>Certificates</h2>
+                            <CertificateProgressBar
+                                grids={grids}
+                                capstone={selectedOption}
+                            />
                         </div>
                         <div className="dropdown-container">
                             <CapstoneDropDown
                                 selectedOption={selectedOption}
-                                setSelectedOption={setSelectedOption}
+                                setter={setSelectedOption}
                             />
                         </div>
                         <div className="export-container">

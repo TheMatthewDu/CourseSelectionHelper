@@ -1,6 +1,6 @@
 import React from "react";
 
-export function CapstoneDropDown(setSelectedOption, selectedOption){
+function CapstoneDropDown({setter, selectedOption}){
     return (
         <div className="capstone-dropdown-container">
             <h2>Capstone/Thesis Topic</h2>
@@ -10,7 +10,7 @@ export function CapstoneDropDown(setSelectedOption, selectedOption){
                 <label htmlFor="sidebar-dropdown">Capstone Topic: &nbsp; </label>
                 <select id="sidebar-dropdown"
                         value={selectedOption}
-                        onChange={(e) => setSelectedOption(e.target.value)}
+                        onChange={(e) => setter(e.target.value)}
                 >
                     <option value="Select">-- Choose One --</option>
                     <option value="AI">Artificial Intelligence</option>
@@ -27,3 +27,5 @@ export function CapstoneDropDown(setSelectedOption, selectedOption){
         </div>
     );
 }
+
+export default CapstoneDropDown;
